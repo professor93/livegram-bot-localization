@@ -1,38 +1,38 @@
 ---
-name: English
+name: Англійская
 start:
   welcome: |
-    <a href="https://t.me/BotUpdates/111"><b>Livegram Bot</b></a> is a builder of feedback bots for Telegram. Read more <a href="http://telegra.ph/What-is-Livegram-Bot-03-17">here</a>.
+    <a href="https://t.me/BotUpdates/111"><b>Livegram Bot</b></a> - канструктар ботаў зваротнай сувязі для Telegram. Падрабязныя звесткі можна знайсці <a href="http://telegra.ph/What-is-Livegram-Bot-03-17">тут</a>.
 
-    You can control bot by sending these commands:
+    Вы можаце кіраваць ботамі з дапамогай наступных загадаў:
 
-    /addbot - connect a new bot
-    /mybots - manage bots
+    /addbot - дадаць новага бота
+    /mybots - кіраванне ботамі
 
-    /ads - buy ads
-    /help - answers to basic questions
+    /ads - рэклама
+    /help - даведка
 
-    Join @LivegramUpdates and @secretship to get news faster and don't ping support every time.
-  do: OK. What do you want to do?
-  choose_language: Please choose your language.
-  language_changed: '👌 OK, your language saved.'
+    Падпісвайцеся на @LivegramUpdates і @secretship, каб сачыць за навінамі бота.
+  do: Што будзем рабіць?
+  choose_language: Абярыце мову.
+  language_changed: '👌 Мова захаваная.'
   help: |
-    If you have any questions, take a look at the <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
+    Калі ў вас ёсць пытанні, звярніцеся да нашай <a href="http://telegra.ph/Livegram-Help-03-29">Даведкі</a>.
 
-    You can control bot by sending these commands:
+    Вы можаце кіраваць ботамі з дапамогай наступных загадаў:
 
-    /addbot - connect a new bot
-    /mybots - manage bots
+    /addbot - дадаць новага бота
+    /mybots - кіраванне ботамі
 
-    /ads - buy ads
-    /feedback - contact of the dev
-    /lang - сhange your language
+    /ads - рэклама
+    /feedback - зваротная сувязь
+    /lang - змяніць мову
 
-    Join @LivegramUpdates and @secretship to get news faster and don't ping support every time.
+    Падпісвайцеся на @LivegramUpdates і @secretship, каб сачыць за навінамі бота.
   example: |
-    Here is examples of bots that were made using Livegram Bot:
+    Прыклады выкарыстання нашага бота:
 
-    @ExampleSupportBot — example of a bot made using Livegram Bot.
+    @ExampleSupportBot — узор бота, які створаны з дапамогай Livegram Bot.
   feedback: |
     Message us at @LivegramSupportBot if you have any issues or questions about Livegram Bot.
 
@@ -162,31 +162,31 @@ keyboard:
     agree_and_continue: Agree and Continue
   btn:
     true: Yes, It's Right
-    back: Back
+    back: Назад
     back_inline: '« Back'
-    cancel: Cancel
-    help: Help
+    cancel: Скасаваць
+    help: Даведка
   bots:
     add_bot: Connect Bot
     set: Bot Settings
     texts: Localizations
-    chats: Groups
-    statistics: Statistics
+    chats: Групы
+    statistics: Статыстыка
     delete_bot: Delete Bot
     back_to_list: '« Back to Bots List'
   settings:
     users:
-      newsletter: Broadcast
+      newsletter: Трансляцыя
     chats:
       connect_language: Change Language
     texts:
       add_language: Add Language
       is_default: This language set as default
-      set_default: Set as Default
+      set_default: Зрабіць прадвызначаным
       change: Edit Strings
       delete: Delete Language
-      reset: Reset
-      skip: Skip
-      complete: Save Changes
+      reset: Скінуць
+      skip: Прамінуць
+      complete: Захаваць змены
       timer: "${timer ? 'Delay Timer: ' + timer + '.' : 'Set Delay Timer' }"
-      disable_timer: Disable
+      disable_timer: Выключыць
