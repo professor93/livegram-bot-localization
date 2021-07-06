@@ -3,20 +3,20 @@ language_info:
   is_enabled: true
   name: Англійская
 start:
-  choose_language: 'Please choose your language:'
-  language_changed: OK, your language saved.
+  choose_language: 'Абярыце мову:'
+  language_changed: Мова захаваная.
   copyright: |
-    This bot was made using @LivegramBot.
+    Гэты бот створаны з дапамогай @LivegramBot.
 cannot_forward: |
-  You can't forward someone else's messages.
+  Вы не можаце перасылаць чужыя паведамленні.
 cannot_edit: |
-  If you want that the receiver can be able to see the changes, send your message as new.
+  Калі вы хочаце, каб атрымальнік пабачыў змены, адпраўце паведамленне нанова.
 welcome: |-
-  Hello!
+  Вітаем!
 
-  You can contact us using this bot.
-after_sending: (strings are not specified)
+  Вы можаце звязацца з намі з дапамогай гэтага бота.
+after_sending: (тэкст адсутнічае)
 ban: |
-  You have been banned ${until ? 'until ' + until + ' UTC' : 'forever'}.${reason ? '\n\nReason: ' + reason : ''}
+  Вы заблакаваныя ў гэтым боце ${until ? ' да ' + until + ' UTC' : 'назаўжды'}.${reason ? '\n\nПрычына: ' + reason : ''}
 unban: |
-  You have been unbanned.
+  Вы разблакаваныя.
