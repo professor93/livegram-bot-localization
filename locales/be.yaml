@@ -49,63 +49,63 @@ bots:
 
       <b>Увага!</b> Не падключайце боты, якія ўжо выкарыстоўваюцца іншымі ботамі кшталту Chatfuel, Manybot і інш.
     wrong_token: |
-      Doesn't look like anything to me. Please send me a token of your bot. It should look like this one: <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>
+      Гэта не токен бота. Адпраўце мне токен вашага бота. Ён выглядае так: <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>
     error_add: |
-      Invalid token. Try to get a new one or use a token of another bot.
+      Хібны токен. Паспрабуйце атрымаць новы токен або выкарыстайце токен іншага бота.
     bot_already_added: |
-      Looks familiar to me. You already have this bot connected.
+      Гэты бот ужо падключаны.
     connect: |
-      Success! @${bot.username} has been connected.
+      Бот @${bot.username} падключаны.
 
-      Your new bot is ready for working. If you have any questions, take a look at the <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
-    owner_changed: Success! You are now the ownership of the bot.
+      Ваш новы бот гатовы да працы. Калі маеце пытанні, звярніцеся да <a href="http://telegra.ph/Livegram-Help-03-29">Даведкі па Livegram</a>.
+    owner_changed: Цяпер вы ўладальнік бота.
   list:
     not_found_bots: |
-      There is no connected bots yet. Send /addbot to connect a new one.
-    welcome: 'Сhoose a bot from the list below:'
+      У вас пакуль што няма падключаных ботаў. Адпраўце /addbot, каб падключыць бота.
+    welcome: 'Абярыце бота са спіса:'
     view_bot: |
-      Here it is: @${bot.username}. What do you want to do with the bot?
+      Кіраванне ботам @${bot.username}.
   settings:
     confirm_delete_bot: |
-      Are you sure you want to delete @${bot}?
+      Сапраўды хочаце выдаліць @${bot}?
 
-      Bot messages will not be deleted.
-    bot_deleted: '👌 Done! The bot is gone.'
+      Паведамленні бота не выдаляцца.
+    bot_deleted: '👌 Гатова! Бот выдалены.'
     texts:
       welcome: |
-        You can add another one language or edit strings of existed.
+        Вы можаце дадаць яшчэ адну мову або абраць наяўную і змяніць тэкст.
       select_language: |
-        Here it is: <b>${language.name}</b>.
-        ${language.is_default ? '\n<b>This language set as default.</b>\n' : ''}
-        You can edit strings or delete this language. If you set the language as default, it will be shown to users after starting the bot.
+        Вы абралі: <b>${language.name}</b>.
+        ${language.is_default ? '\n<b>Гэта прадвызначаная мова.</b>\n' : ''}
+        Вы можаце змяніць тэкст або выдаліць гэтую мову. Калі вы зробіце мову прадвызначанай, то падчас першага запуску карыстальнікі будуць бачыць тэкст на гэтай мове.
       add_language: |
-        Choose language you want to add:
-      language_added: '👌 OK, the language has been added.'
-      language_deleted: '👌 OK, the language has been deleted.'
-      language_saved_by_default: '👌 OK, the language has been set as default.'
+        Абярыце мову, якую хочаце дадаць:
+      language_added: '👌 Мова дададзеная.'
+      language_deleted: '👌 Мова выдаленая.'
+      language_saved_by_default: '👌 Мова зробленая прадвызначанай.'
       change_texts: |2
         ${{
-          welcome: '<b>1/2.</b> This message is sent after starting the bot.',
-          after_sending: '<b>2/2.</b> This message is sent automatically as a reply to user messages. By default, it does not send anything.'
+          welcome: '<b>1/2.</b> Гэтае паведамленне будзе паказвацца пасля запуску бота.',
+          after_sending: '<b>2/2.</b> Гэтае паведамленне будзе аўтаматычна адпраўляцца як адказ на паведамленне карыстальніка. Прадвызначана нічога адпраўляцца не будзе.'
         }[change.key]}
 
-        <b>Current strings</b>${change.is_default ? ' (used by default)' : ''}:
-        <pre>${change.current_text || '(strings are not specified)'}</pre>
+        <b>Бягучы тэкст</b>${change.is_default ? '(выкарыстоўваецца прадвызначана)' : ''}:
+        <pre>${change.current_text || '(тэкст не ўведзены)'}</pre>
 
-        Send a message with a new strings. You can also use <a href="https://core.telegram.org/bots/api#html-style">HTML-style formatting</a>.
+        Адпраўце паведамленне з тэкстам. Вы можаце выкарыстоўваць<a href="https://core.telegram.org/bots/api#html-style">фарматаванне HTML</a>.
       error_parse_message: |
-        Errors in formatting text:
+        Няправільнае фарматаванне:
 
         <pre>${description}</pre>
 
-        Please fix all errors and send message again.
+        Выпраўце памылкі і адпраўце зноў.
       send_timer: |
-        Send a period of time during which the response message will not be sent to a user again. The next time formats are allowed: <code>5s</code>, <code>1m</code> or <code>1h</code>.
+        Вы можаце вызначыць час, на працягу якога адказ на паведамленне не будзе паказвацца паўторна. Даступныя фарматы: <code>5s</code>, <code>1m</code> або <code>1h</code>.
       bad_timer: |
-        Incorrect time. Only periods from 5 seconds to 72 hours are allowed.
+        Хібнае значэнне. Мінімум 5 секунд і максімум 72 гадзіны.
     chats:
       welcome: |
-        Choose a group you want to set up.
+        Абярыце чат, які хочаце наладзіць.
       chats_not_found: |
         There is no connected groups yet. All messages will be sent to this conversation.
 
