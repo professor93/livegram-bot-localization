@@ -1,7 +1,7 @@
 ---
 language_info:
   is_enabled: true
-  name: English
+  name: Англійская
 start:
   choose_language: 'Please choose your language:'
   language_changed: OK, your language saved.
