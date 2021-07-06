@@ -34,20 +34,20 @@ start:
 
     @ExampleSupportBot — узор бота, які створаны з дапамогай Livegram Bot.
   feedback: |
-    Message us at @LivegramSupportBot if you have any issues or questions about Livegram Bot.
+    Калі ў вас ёсць пытанні ці прапановы па Livegram Bot, то вы можаце звязацца з намі з дапамогай @LivegramSupportBot. 
 
-    Please note that we do not answer questions regarding bots connected to our platform. We are Livegram Bot technical support.
+    Звярніце ўвагу, што мы не адказваем на пытанні наконт ботаў, падключаных да нашай платформы. Мы адказваем толькі на пытанні па Livegram Bot.
   ads: |
-    Use @SecretshipAdsBot if you want to buy ads in this bot. We have more than 5,000,000 active users.
+    Калі хочаце размясціць рэкламу ў гэтым боце, выкарыстоўвайце @SecretshipAdsBot. У нас больш за 5 000 000 актыўных карыстальнікаў.
 bots:
   add:
     welcome: |
-      To connect a bot, you should follow these two steps:
+      Каб падключыць бота, выканайце наступныя дзеянні:
 
-      1. Open @BotFather and <a href="http://telegra.ph/Create-Bot-Livegram-FAQ-03-29">create a new bot</a>.
-      2. You’ll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to me.
+      1. Адкрыйце @BotFather і <a href="http://telegra.ph/Create-Bot-Livegram-FAQ-03-29">стварыце новага бота</a>.
+      2. Вы атрымаеце токен (кшталту 12345:6789ABCDEF) — скапіюйце і ўстаўце яго сюды.
 
-      <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
+      <b>Увага!</b> Не падключайце боты, якія ўжо выкарыстоўваюцца іншымі ботамі кшталту Chatfuel, Manybot і інш.
     wrong_token: |
       Doesn't look like anything to me. Please send me a token of your bot. It should look like this one: <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>
     error_add: |
