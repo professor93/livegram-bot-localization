@@ -36,32 +36,32 @@ start:
   feedback: |
     Калі ў вас ёсць пытанні ці прапановы па Livegram Bot, то вы можаце звязацца з намі з дапамогай @LivegramSupportBot. 
 
-    Звярніце ўвагу, што мы не адказваем на пытанні наконт ботаў, падключаных да нашай платформы. Мы адказваем толькі на пытанні па Livegram Bot.
+    Звярніце ўвагу, што мы не адказваем на пытанні наконт ботаў, падлучаных да нашай платформы. Мы адказваем толькі на пытанні па Livegram Bot.
   ads: |
     Калі хочаце размясціць рэкламу ў гэтым боце, выкарыстоўвайце @SecretshipAdsBot. У нас больш за 5 000 000 актыўных карыстальнікаў.
 bots:
   add:
     welcome: |
-      Каб падключыць бота, выканайце наступныя дзеянні:
+      Каб падлучыць бота, выканайце наступныя дзеянні:
 
       1. Адкрыйце @BotFather і <a href="http://telegra.ph/Create-Bot-Livegram-FAQ-03-29">стварыце новага бота</a>.
       2. Вы атрымаеце токен (кшталту 12345:6789ABCDEF) — скапіюйце і ўстаўце яго сюды.
 
-      <b>Увага!</b> Не падключайце боты, якія ўжо выкарыстоўваюцца іншымі ботамі кшталту Chatfuel, Manybot і інш.
+      <b>Увага!</b> Не падлучайце боты, якія ўжо выкарыстоўваюцца іншымі ботамі кшталту Chatfuel, Manybot і інш.
     wrong_token: |
       Гэта не токен бота. Адпраўце мне токен вашага бота. Ён выглядае так: <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>
     error_add: |
       Хібны токен. Паспрабуйце атрымаць новы токен або выкарыстайце токен іншага бота.
     bot_already_added: |
-      Гэты бот ужо падключаны.
+      Гэты бот ужо падлучаны.
     connect: |
-      Бот @${bot.username} падключаны.
+      Бот @${bot.username} падлучаны.
 
       Ваш новы бот гатовы да працы. Калі маеце пытанні, звярніцеся да <a href="http://telegra.ph/Livegram-Help-03-29">Даведкі па Livegram</a>.
     owner_changed: Цяпер вы ўладальнік бота.
   list:
     not_found_bots: |
-      У вас пакуль што няма падключаных ботаў. Адпраўце /addbot, каб падключыць бота.
+      У вас пакуль што няма падлучаных ботаў. Адпраўце /addbot, каб падлучыць бота.
     welcome: 'Абярыце бота са спіса:'
     view_bot: |
       Кіраванне ботам @${bot.username}.
@@ -107,86 +107,86 @@ bots:
       welcome: |
         Абярыце чат, які хочаце наладзіць.
       chats_not_found: |
-        There is no connected groups yet. All messages will be sent to this conversation.
+        Гэты бот яшчэ не дададзены ў чаты. Усе паведамленні будуць адпраўляцца ў гэтую гутарку.
 
-        To connect a new group, add @${username} as a member to it.
+        Каб падлучыць чат, дадайце ў яго @${username}.
       switch_language: |
-        Choose language messages from users of what will be sent to this group.
+        Мова паведамленняў, якія будуць адпраўляцца ў гэты чат.
     stats: |
-      Stats for @${username}:
+      Статыстыка бота @${username}:
 
-      <b>Users:</b>
-      All users: <b>${users_all}</b>
-      Have blocked: <b>${users_bot_blocked}</b>
+      <b>Карыстальнікі:</b>
+      Агулам: <b>${users_all}</b>
+      Заблакавалі бот: <b>${users_bot_blocked}</b>
 
-      <b>Messages:</b>
-      All messages: <b>${messages_all}</b>
-      Incoming: <b>${messages_messages}</b>
-      Outgoing: <b>${messages_reply}</b>
+      <b>Паведамленні:</b>
+      Агулам: <b>${messages_all}</b>
+      Уваходныя: <b>${messages_messages}</b>
+      Выходныя: <b>${messages_reply}</b>
 
-      <i>The counter of the users that have blocked the bot is updating only after sending broadcast post.</i>
+      <i>Лічыльнік карыстальнікаў, якія заблакавалі бота, абнаўляецца пасля кожнай рассылкі.</i>
   chat:
     added: |
-      Success! The group "${title}" has been connected to @${bot}.
+      Чат "${title}" паспяхова падлучаны да бота @${bot}.
 
-      Now all messages will be sent there. You can add another users to that group, so they will be also able to reply on messages from @${bot}.
+      Цяпер усе паведамленні будуць адпраўляцца сюды. Вы можаце дадаваць сюды іншых карыстальнікаў, якія змогуць адказваць на паведамленні з @${bot}.
 
-      To disconnect the group, delete the bot from its members list.
+      Каб адлучыць чат, выдаліце бота са спіса ўдзельнікаў чата.
     removed: |
-      The group "${title}" has been disconnected from @${bot} as the bot was deleted from it.
+      Чат "${title}" адлучаны ад @${bot}, бо бот быў з яго выдалены.
 help_ban: |
-  Incorrect time. The next time formats are allowed: 24h, 365d or 12m.
+  Хібны фармат часу. Дазволеныя фарматы: 24h, 365d або 12m.
 terms: |2
-  By continuing, you agree not to:
+  Працягваючы, вы пагаджаецеся:
 
-  - use our service to violate laws of your country.
-  - promote violence via connected bots.
-  - spread pornographic content via connected bots.
+  - не парушаць законы краіны, у якой жывеце.
+  - не садзейнічаць гвалту з дапамогай падлучаных ботаў.
+  - не распаўсюджваць парнаграфію з дапамогай падлучаных ботаў.
 
-  We reserve the right to update these <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service</a> later.
+  Мы пакідаем права абнаўляць <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Умовы выкарыстання</a>.
 
   ${is_agreed
-    ? '✅ <b>You agreed to our Terms of Service</b>'
+    ? '✅ <b>Вы пагадзіліся з умовамі выкарыстання</b>'
     : ''
   }
 bot_blocked: |
-  Your bot @${username} has been disconnected and blocked for violating the <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service Livegram</a>.
+  Бот @${username} адлучаны і заблакаваны праз парушэнне <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Умоў выкарыстання</a>.
 
-  Message us at @LivegramSupportBot if you would like to appeal this decision.
+  Калі хочаце гэта абскардзіць, напішыце ў @LivegramSupportBot.
 bot_unblocked: |
-  Your bot @${username} has been unblocked.
+  Ваш бот @${username} разблакаваны.
 you_blocked: |
-  You cannot add new bots because we have blocked your bots that violate the <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service Livegram</a>.
+  Вы не можаце дадаваць ботаў, бо маеце ботаў, якія былі заблакаваныя праз парушэнне <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Умоў выкарыстання</a>.
 keyboard:
   terms:
-    agree_and_continue: Agree and Continue
+    agree_and_continue: Пагадзіцца і працягнуць
   btn:
-    true: Yes, It's Right
+    true: Так
     back: Назад
-    back_inline: '« Back'
+    back_inline: '« Назад'
     cancel: Скасаваць
     help: Даведка
   bots:
-    add_bot: Connect Bot
-    set: Bot Settings
-    texts: Localizations
+    add_bot: Падлучыць бота
+    set: Налады бота
+    texts: Тэксты
     chats: Групы
     statistics: Статыстыка
-    delete_bot: Delete Bot
-    back_to_list: '« Back to Bots List'
+    delete_bot: Выдаліць бота
+    back_to_list: '« Вярнуцца да спіса ботаў'
   settings:
     users:
       newsletter: Трансляцыя
     chats:
-      connect_language: Change Language
+      connect_language: Падлучыць мову
     texts:
-      add_language: Add Language
-      is_default: This language set as default
+      add_language: Дадаць мову
+      is_default: Мова зробленая прадвызначанай
       set_default: Зрабіць прадвызначаным
-      change: Edit Strings
-      delete: Delete Language
+      change: Змяніць тэкст
+      delete: Выдаліць
       reset: Скінуць
       skip: Прамінуць
       complete: Захаваць змены
-      timer: "${timer ? 'Delay Timer: ' + timer + '.' : 'Set Delay Timer' }"
+      timer: "${timer ? 'Затрымка адпраўлення: ' + timer + '.' : 'Вызначыць затрымку' }"
       disable_timer: Выключыць
