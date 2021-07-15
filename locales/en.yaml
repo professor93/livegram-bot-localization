@@ -28,7 +28,7 @@ start:
     /feedback - contact of the dev
     /lang - сhange your language
 
-    Join @LivegramUpdates and @BotUpdates to stay in touch with us.
+    Join @LivegramUpdates and @secretship to stay in touch with us.
   example: |
     Here is examples of bots that were made using Livegram:
   
@@ -55,10 +55,19 @@ bots:
     bot_already_added: |
       Looks familiar to me. You already have this bot connected.
     connect: |
-      Success! @${bot.username} has been connected.
+      Success! @${bot.username} has been connected. Your bot will forward any (including your own) messages sent to its one-to-one chat.
       
-      Your new bot is ready to work. If you have any questions, take a look at our <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
-    owner_changed: Success! You are now the ownership of the bot.
+      <b>How do I reply to incoming messages?</b>
+      Use Telegram's <a href="https://telegram.org/tour/groups#replies">reply</a> feature. Swipe left (or double-click) on the message you want to reply.
+      
+      <b>How can I allow other users to reply via my bot?</b>
+      Create a group and add your bot there, so that all chat members can reply to incoming messages.
+      
+      <b>How can I edit a welcome message?</b>
+      To edit a welcome message or add languages to the bot, choose 'Open Bot Settings' and go to 'Localizations'.
+      
+      If you have any questions, take a look at our <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
+    owner_changed: Success! You are the owner of this bot now.
   list:
     not_found_bots: |
       There is no connected bots yet. Send /addbot to connect a new one.
@@ -73,11 +82,11 @@ bots:
     bot_deleted: 👌 Done! The bot is gone.
     texts:
       welcome: |
-        You can add another one language or edit strings of existed.
+        You can add new language or edit message texts for existed ones.
       select_language: |
         Here it is: <b>${language.name}</b>.        
         ${language.is_default ? '\n<b>This language set as default.</b>\n' : ''}        
-        You can edit strings or delete this language. The default langauge is the langauge that users see after they start the bot.
+        You can edit message texts or delete this language. The default langauge is the langauge that users see after starting the bot.
       add_language: |
         Choose language you want to add:
         
@@ -87,14 +96,14 @@ bots:
       
       change_texts: |
         ${{
-          welcome: '<b>1/2.</b> This message is sent to users after they start the bot.',
-          after_sending: '<b>2/2.</b> This message is sent automatically as a reply to user messages. By default, it's disabled.'
+          welcome: '<b>Welcome message.</b> This message is sent to users after starting the bot.',
+          after_sending: '<b>Auto-reply.</b> This message is sent automatically as a reply to all incoming messages. By default, it's disabled.'
         }[change.key]}
         
-        <b>Current strings</b>${change.is_default ? ' (used by default)' : ''}:
-        <pre>${change.current_text || '(strings are not specified)'}</pre>
+        <b>Current text</b>${change.is_default ? ' (used by default)' : ''}:
+        <pre>${change.current_text || '(message text are not specified)'}</pre>
         
-        Send a message with a new strings. You can also use <a href="https://core.telegram.org/bots/api#html-style">HTML-style formatting</a>.
+        Send new text to replace the current one. You can use <a href="https://core.telegram.org/bots/api#html-style">HTML-style formatting</a>.
       error_parse_message: |
         Errors in formatting text:
         
@@ -102,18 +111,18 @@ bots:
         
         Please fix all errors and send message again.
       send_timer: |
-        Send a period of time during which the reply message will not be sent to the user again. The next time formats are allowed: <code>5s</code>, <code>1m</code> or <code>1h</code>.
+        Send a period of time during which an auto-reply will not be sent repeatedly. For example: <code>5s</code>, <code>1m</code> or <code>1h</code>.
       bad_timer: |
-        Incorrect time. Only periods from 5 seconds to 72 hours are allowed.
+        Incorrect amount of time. A period should be more than 5 seconds and less than 72 hours.
     chats:
       welcome: |
         Choose a group you want to set up.
       chats_not_found: |
-        There is no connected groups yet. All messages will be sent to this conversation.
+        There is no connected groups yet. All incoming messages will be sent to this conversation.
          
         To connect a new group, add @${username} as a member to it.
       switch_language: |
-        Choose a language of messages that will be sent to this group.
+        Choose one or more languages for messages that will be sent to this group.
 
     stats: |
       Statistics for @${username}:
@@ -133,14 +142,11 @@ bots:
     added: |
       Success! The group "${title}" has been connected to @${bot}.
        
-      Now all messages will be sent there. You can add another users to that group, so they will be also able to reply on messages from @${bot}.
+      Now new incoming messages will be sent there.
       
-      To disconnect the group, delete the bot from its members list.
+      To disconnect the group, remove the bot from members.
     removed: |
-      The group "${title}" has been disconnected from @${bot} as the bot was deleted from it.
-
-help_ban: |
-  Incorrect time. The next time formats are allowed: 24h, 365d or 12m.
+      The group "${title}" was disconnected from @${bot} because the bot was kicked.
 
 terms: |
   By continuing, you agree not to:
@@ -159,7 +165,7 @@ terms: |
 bot_blocked: |
   Your bot @${username} was disconnected and blocked for violating our <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service</a>.
 
-  Message us at @LivegramSupportBot if you would like to appeal this decision.
+  Contact us via @LivegramSupportBot if you would like to appeal this decision.
 
 bot_unblocked: |
   Your bot @${username} has been unblocked.
@@ -181,12 +187,12 @@ keyboard:
 
   bots:
     add_bot: Connect Bot
-    set: Bot Settings
+    set: Open Bot Settings
     
     texts: Localizations
     chats: Groups
     statistics: Statistics
-    delete_bot: Disconnect
+    delete_bot: Disconnect Bot
     back_to_list: « Back to Bots List
     
   settings:
@@ -198,10 +204,10 @@ keyboard:
       add_language: Add Language
       is_default: This language set as default
       set_default: Set as Default
-      change: Edit Strings
+      change: Edit Message Texts
       delete: Delete Language
       reset: Reset
-      skip: Skip
+      skip: Skip »
       complete: Save Changes
       timer: "${timer
         ? 'Delay Timer: ' + timer + '.'
