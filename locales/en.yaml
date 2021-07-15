@@ -2,9 +2,9 @@ name: English
 
 start:
   welcome: |
-    <a href="https://t.me/BotUpdates/111"><b>Livegram Bot</b></a> is a builder of feedback bots for Telegram. Read more <a href="http://telegra.ph/What-is-Livegram-Bot-03-17">here</a>.
+    <a href="https://t.me/BotUpdates/111"><b>Livegram Bot</b></a> is a builder of feedback bots for Telegram. <a href="http://telegra.ph/What-is-Livegram-Bot-03-17">Read more</a> about it.
     
-    You can control bot by sending these commands:
+    You can control the bot using these commands:
 
     /addbot - connect a new bot
     /mybots - manage bots
@@ -12,14 +12,14 @@ start:
     /ads - buy ads
     /help - answers to basic questions
 
-    Join @LivegramUpdates and @secretship to get news faster and don't ping support every time.
+    Join @LivegramUpdates and @BotUpdates to stay in touch with us.
   do: OK. What do you want to do?
   choose_language: Please choose your language.
   language_changed: 👌 OK, your language saved.
   help: |
-    If you have any questions, take a look at the <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
+    If you have any questions, take a look at our <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
     
-    You can control bot by sending these commands:
+    You can control the bot using these commands:
 
     /addbot - connect a new bot
     /mybots - manage bots
@@ -28,15 +28,13 @@ start:
     /feedback - contact of the dev
     /lang - сhange your language
 
-    Join @LivegramUpdates and @secretship to get news faster and don't ping support every time.
+    Join @LivegramUpdates and @BotUpdates to stay in touch with us.
   example: |
-    Here is examples of bots that were made using Livegram Bot:
+    Here is examples of bots that were made using Livegram:
   
-    @ExampleSupportBot — example of a bot made using Livegram Bot.
+    @ExampleSupportBot — the example bot that was made using Livegram.
   feedback: |
-    Message us at @LivegramSupportBot if you have any issues or questions about Livegram Bot.
-
-    Please note that we do not answer questions regarding bots connected to our platform. We are Livegram Bot technical support.
+    You can contact us via @LivegramSupportBot if you have any problems or questions that are not answered in our <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
   ads: |
     Use @SecretshipAdsBot if you want to buy ads in this bot. We have more than 5,000,000 active users.
  
@@ -51,15 +49,15 @@ bots:
       <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
             
     wrong_token: |
-      Doesn't look like anything to me. Please send me a token of your bot. It should look like this one: <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>
+      Doesn't look like a bot token. Please send me a token of your bot. It should look like this: <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>
     error_add: |
-      Invalid token. Try to get a new one or use a token of another bot.
+      Invalid token. Try to get a new one or use a token of an another bot.
     bot_already_added: |
       Looks familiar to me. You already have this bot connected.
     connect: |
       Success! @${bot.username} has been connected.
       
-      Your new bot is ready for working. If you have any questions, take a look at the <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
+      Your new bot is ready to work. If you have any questions, take a look at our <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
     owner_changed: Success! You are now the ownership of the bot.
   list:
     not_found_bots: |
@@ -69,7 +67,7 @@ bots:
       Here it is: @${bot.username}. What do you want to do with the bot?
   settings:
     confirm_delete_bot: |
-      Are you sure you want to delete @${bot}? 
+      Are you sure you want to disconnect @${bot}? 
       
       Bot messages will not be deleted.
     bot_deleted: 👌 Done! The bot is gone.
@@ -79,7 +77,7 @@ bots:
       select_language: |
         Here it is: <b>${language.name}</b>.        
         ${language.is_default ? '\n<b>This language set as default.</b>\n' : ''}        
-        You can edit strings or delete this language. If you set the language as default, it will be shown to users after starting the bot.
+        You can edit strings or delete this language. The default langauge is the langauge that users see after they start the bot.
       add_language: |
         Choose language you want to add:
         
@@ -89,8 +87,8 @@ bots:
       
       change_texts: |
         ${{
-          welcome: '<b>1/2.</b> This message is sent after starting the bot.',
-          after_sending: '<b>2/2.</b> This message is sent automatically as a reply to user messages. By default, it does not send anything.'
+          welcome: '<b>1/2.</b> This message is sent to users after they start the bot.',
+          after_sending: '<b>2/2.</b> This message is sent automatically as a reply to user messages. By default, it's disabled.'
         }[change.key]}
         
         <b>Current strings</b>${change.is_default ? ' (used by default)' : ''}:
@@ -104,7 +102,7 @@ bots:
         
         Please fix all errors and send message again.
       send_timer: |
-        Send a period of time during which the response message will not be sent to a user again. The next time formats are allowed: <code>5s</code>, <code>1m</code> or <code>1h</code>.
+        Send a period of time during which the reply message will not be sent to the user again. The next time formats are allowed: <code>5s</code>, <code>1m</code> or <code>1h</code>.
       bad_timer: |
         Incorrect time. Only periods from 5 seconds to 72 hours are allowed.
     chats:
@@ -115,21 +113,21 @@ bots:
          
         To connect a new group, add @${username} as a member to it.
       switch_language: |
-        Choose language messages from users of what will be sent to this group.
+        Choose a language of messages that will be sent to this group.
 
     stats: |
-      Stats for @${username}:
+      Statistics for @${username}:
 
       <b>Users:</b>
       All users: <b>${users_all}</b>
-      Have blocked: <b>${users_bot_blocked}</b>
+      Blocked the bot: <b>${users_bot_blocked}</b>
 
       <b>Messages:</b>
       All messages: <b>${messages_all}</b>
       Incoming: <b>${messages_messages}</b>
       Outgoing: <b>${messages_reply}</b>
 
-      <i>The counter of the users that have blocked the bot is updating only after sending broadcast post.</i>
+      <i>The counter of users who blocked the bot is updated only after sending a broadcast post.</i>
         
   chat:
     added: |
@@ -154,12 +152,12 @@ terms: |
   We reserve the right to update these <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service</a> later.
 
   ${is_agreed
-    ? '✅ <b>You agreed to our Terms of Service</b>'
+    ? '✅ <b>You have agreed to our Terms of Service</b>'
     : ''
   }
 
 bot_blocked: |
-  Your bot @${username} has been disconnected and blocked for violating the <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service Livegram</a>.
+  Your bot @${username} was disconnected and blocked for violating our <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service</a>.
 
   Message us at @LivegramSupportBot if you would like to appeal this decision.
 
@@ -167,7 +165,7 @@ bot_unblocked: |
   Your bot @${username} has been unblocked.
 
 you_blocked: |
-  You cannot add new bots because we have blocked your bots that violate the <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service Livegram</a>.
+  You cannot add new bots because one of your bots violates our <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service</a>.
 
 keyboard:
   terms:
@@ -188,7 +186,7 @@ keyboard:
     texts: Localizations
     chats: Groups
     statistics: Statistics
-    delete_bot: Delete Bot
+    delete_bot: Disconnect
     back_to_list: « Back to Bots List
     
   settings:
