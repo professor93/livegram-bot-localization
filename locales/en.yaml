@@ -78,7 +78,7 @@ bots:
     confirm_delete_bot: |
       Are you sure you want to disconnect @${bot}? 
       
-      Bot messages will not be deleted.
+      Messages and bot statistics will not be deleted.
     bot_deleted: 👌 Done! The bot is gone.
     texts:
       welcome: |
