@@ -210,7 +210,7 @@ keyboard:
       skip: Skip »
       complete: Save Changes
       timer: "${timer
-        ? 'Delay Timer: ' + timer + '.'
-        : 'Set Delay Timer'
+        ? 'Cooldown Timer: ' + timer + '.'
+        : 'Set Cooldown Timer'
       }"
       disable_timer: Disable 
