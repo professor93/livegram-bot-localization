@@ -55,7 +55,7 @@ bots:
     bot_already_added: |
       Looks familiar to me. You already have this bot connected.
     connect: |
-      Success! @${bot.username} has been connected. Your bot will forward any (including your own) messages sent to the one-to-one chat.
+      Success! @${bot.username} has been connected. Your bot will forward any (including your own) messages sent to it.
       
       <b>How do I reply to incoming messages?</b>
       Use Telegram's <a href="https://telegram.org/tour/groups#replies">reply</a> feature. Swipe left (or double-click) on the message you want to reply.
