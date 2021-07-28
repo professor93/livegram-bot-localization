@@ -12,7 +12,7 @@ start:
     /ads - buy ads
     /help - answers to basic questions
 
-    Join @LivegramUpdates and @BotUpdates to stay in touch with us.
+    Join @LivegramUpdates and @secretship to stay in touch with us.
   do: OK. What do you want to do?
   choose_language: Please choose your language.
   language_changed: 👌 OK, your language saved.
@@ -60,7 +60,7 @@ bots:
       <b>How do I reply to incoming messages?</b>
       Use Telegram's <a href="https://telegram.org/tour/groups#replies">reply</a> feature. Swipe left (or double-click) on the message you want to reply.
 
-      <b>How can I allow other users to reply via my bot?</b>
+      <b>How can I allow other users to reply through my bot?</b>
       Create a group and add your bot there, so that all chat members can reply to incoming messages.
 
       <b>How can I edit a welcome message?</b>
@@ -199,7 +199,7 @@ keyboard:
     users:
       newsletter: Broadcast
     chats:
-      connect_language: Change Language
+      connect_language: Choose Languages
     texts:
       add_language: Add Language
       is_default: This language set as default
