@@ -13,6 +13,8 @@ start:
     /help - answers to basic questions
 
     Join @LivegramUpdates and @secretship to stay in touch with us.
+
+    🎰 Try <a href="t.me/CryptoGameBot?start=r-56077720">@CryptoGameBot</a> and win coins.
   do: OK. What do you want to do?
   choose_language: Please choose a language.
   language_changed: 👌 Done! Bot language saved.
@@ -140,7 +142,7 @@ bots:
 
   chat:
     added: |
-      Success! The group "${title}" has been connected to @${bot}. 
+      Success! The group "${title}" has been connected to @${bot}.
 
       If you have multiple languages added, press 'Configure Group'.
 
