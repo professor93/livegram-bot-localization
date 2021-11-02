@@ -4,14 +4,6 @@ start:
   welcome: |
     <a href="https://t.me/BotUpdates/111"><b>Livegram Bot</b></a> is a builder of feedback bots for Telegram. <a href="http://telegra.ph/What-is-Livegram-Bot-03-17">Read more</a> about it.
 
-    You can control the bot using these commands:
-
-    /addbot - connect a new bot
-    /mybots - manage bots
-
-    /ads - buy ads
-    /help - answers to basic questions
-
     Join @LivegramUpdates and @secretship to stay in touch with us.
 
     🎰 Try <a href="t.me/CryptoGameBot?start=r-56077720">@CryptoGameBot</a> and win coins.
@@ -20,11 +12,6 @@ start:
   language_changed: 👌 Done! Bot language saved.
   help: |
     If you have any questions, take a look at <a href="http://telegra.ph/Livegram-Help-03-29">our Help</a>.
-
-    You can control the bot using these commands:
-
-    /addbot - connect a new bot
-    /mybots - manage bots
 
     /ads - buy ads
     /feedback - contact support
@@ -175,17 +162,22 @@ bot_unblocked: |
 you_blocked: |
   You cannot add new bots because one of your bots violates our <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service</a>.
 
-keyboard:
+btn:
+  menu:
+    add_bot: 🤖 Add Bot
+    my_bots: 🏝 My Bots
+    ads: 🏟 Ads
+    help: 👨‍🔧 Help
+
   terms:
     agree_and_continue: Agree and Continue
 
-  btn:
+  common:
     true: Yes, It's Right
     back: Back
     back_inline: « Back
     cancel: Cancel
     help: Help
-
 
   bots:
     add_bot: Connect Bot
