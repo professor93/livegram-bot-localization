@@ -364,6 +364,7 @@ btn:
       name: '@${username} – ${balance}'
       open_pay: 🚀 Запустить показы
       pay:
+        cloudpayments: CloudPayments
         paytodo: PayTodo
         paypal: PayPal
       problem_with_pay: Проблемы с оплатой?
