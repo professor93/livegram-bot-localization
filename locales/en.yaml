@@ -256,7 +256,10 @@ ads:
     confirmed: |
       ✅ Your ad has passed moderation.
 
-      Open your ad to make the payment and start showing it to all users.
+      Payment link ${price} ₽:
+      ${url}
+
+      Your ad becomes visible to users immediately after you made payment.
     canceled: |
       ℹ️ Sorry, your ad has not passed moderation.
 
