@@ -4,9 +4,7 @@ start:
   welcome: |
     <a href="https://t.me/BotUpdates/111"><b>Livegram Bot</b></a> is a builder of feedback bots for Telegram. <a href="http://telegra.ph/What-is-Livegram-Bot-03-17">Read more</a> about it.
 
-    Join @LivegramUpdates and @secretship to stay in touch with us.
-
-    🎰 Try <a href="t.me/CryptoGameBot?start=r-56077720">@CryptoGameBot</a> and win coins.
+    ${ad}
   do: OK. What do you want to do?
   choose_language: Please choose a language.
   language_changed: 👌 Done! Bot language saved.
@@ -18,6 +16,8 @@ start:
     /lang - сhange bot language
 
     Join @LivegramUpdates and @secretship to stay in touch with us.
+
+    ${ad}
   example: |
     Here is examples of bots that were made using Livegram:
 
@@ -36,6 +36,8 @@ bots:
       2. You'll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to this chat.
 
       <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
+
+      ${ad}
 
     wrong_token: |
       Doesn't look like a bot token. Please send me a token of your bot. It should look like this: <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>
@@ -56,13 +58,20 @@ bots:
       To edit a welcome message or add other languages to the bot, choose 'Open Bot Settings' and go to 'Localizations'.
 
       If you have any questions, take a look at our <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
+
+      ${ad}
     owner_changed: Success! You are the owner of this bot now.
   list:
     not_found_bots: |
       There is no connected bots yet. Send /addbot to connect a new one.
-    welcome: Сhoose a bot from the list below.
+    welcome: |
+      Сhoose a bot from the list below.
+
+      ${ad}
     view_bot: |
       Here it is: @${bot.username}. What do you want to do with the bot?
+
+      ${ad}
   settings:
     confirm_delete_bot: |
       Are you sure you want to disconnect @${bot}?
@@ -163,6 +172,9 @@ you_blocked: |
   You cannot add new bots because one of your bots violates our <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service</a>.
 
 ads:
+  line: |-
+    ${ad.view_id ? '<a href="t.me/LivegramBot?start=ads"><b><i>Ads</i></b></a>: <a href="' + ad.url + '"><b>@' + ad.username + '</b></a> – ' + ad.description : ''}
+
   faq: |
     <b>Livegram Ads shortly explained</b>
 
@@ -174,16 +186,18 @@ ads:
 
     • You can track ad views in real time.
 
-    • Your ad will be displayed in the welcome message of @LivegramBot and in 'My Bots'. You can check it by sending /start or /mybots.
+    • Your ad will be displayed in the welcome message of @LivegramBot and another messages of the bot.
 
     • Active ads will be shown to users randomly.
 
   welcome: |
     🚀 <b>Livegram Ads</b>
 
-    Here you can create ad for your channel, group or bot to show it in the welcome message of @LivegramBot or in 'My Bots'.
+    Here you can create ad for your channel, group or bot to show it in the welcome message of @LivegramBot and another messages of the bot.
 
-    Your ad will be shown to Telegram <b>active</b> users.
+    Your ad will be shown to Telegram <b>active</b> users, owner of bots, chats and channels.
+
+    We are supported pay by Apple Pay, Google Pay and bank cards.
 
   create:
     disabled: Sorry, creating ads is currently disabled. Try again later.
@@ -191,7 +205,7 @@ ads:
     username: |
       <b>What to promote?</b>
 
-      Send a public link of your channel, group or bot. For example: @username, t.me/username, t.me/userbot?start=payload.
+      Send a public link of your channel, group or bot. For example: username, t.me/username, t.me/userbot?start=payload.
 
     description: |
       <b>How to describe it?</b>
