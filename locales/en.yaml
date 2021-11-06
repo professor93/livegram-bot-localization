@@ -173,7 +173,7 @@ you_blocked: |
 
 ads:
   line: |-
-    ${ad.view_id ? '<a href="t.me/LivegramBot?start=ads"><b><i>Ads</i></b></a>: <a href="' + ad.url + '"><b>@' + ad.username + '</b></a> – ' + ad.description : ''}
+    ${ad.view_id ? '<a href="t.me/LivegramBot?start=ads"><b><i>' + (isBot ? 'Livegram Ads' : 'Ads') + '</i></b></a>: <a href="' + ad.url + '"><b>@' + ad.username + '</b></a> – ' + ad.description : ''}
 
   faq: |
     <b>Livegram Ads shortly explained</b>
