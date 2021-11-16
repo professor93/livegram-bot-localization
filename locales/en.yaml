@@ -215,7 +215,8 @@ ads:
       The maximum length is 160 characters. Emojis or other emoticons cannot be used. Please follow punctuation and spelling.
 
     description_too_long: Description is too long. Max 160 symbols.
-    description_too_short: Description is too short. Min 10 symbols.
+    description_too_short: Description is too short. Min 20 symbols.
+    description_has_links: The description cannot contain links or @username. Send me text <b>without links or @username</b>.
 
     views: Choose an amount of views for your ad.
 
@@ -233,7 +234,7 @@ ads:
 
       @${username} · ${description}
 
-      ${balance} views · ${price} ₽
+      ${balance} views · ${price} ₽ · ~$${(price / 73).toFixed(0)}
 
     confirmed: |
       ℹ️ Your ad has been created and is awaiting moderation.
@@ -248,7 +249,7 @@ ads:
 
       @${username} · ${description}
 
-      ${count} · ${balance} views · ${price} ₽
+      ${count} · ${balance} views · ${price} ₽ · ~$${(price / 73).toFixed(0)}
 
       ${created_at}
 
@@ -256,7 +257,7 @@ ads:
     confirmed: |
       ✅ Your ad has passed moderation.
 
-      Payment link ${price} ₽:
+      Payment link ${price} ₽ · ~$${(price / 73).toFixed(0)}:
       ${url}
 
       Your ad becomes visible to users immediately after you made payment.
@@ -279,7 +280,7 @@ ads:
       <a href="${url}">@${username}</a> · ${description}
 
       Total views: ${balance}
-      Price: ${price} ₽
+      Price: ${price} ₽ · ~$${(price / 73).toFixed(0)}
 
       <b>Statistics:</b>
       Views – ${stats_views}
