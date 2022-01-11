@@ -73,6 +73,13 @@ bots:
 
       ${ad}
   settings:
+    update_token: |
+      For security reasons, you need to update your Bot API Token, otherwise it will stop working in the near future.
+
+      1. Open @BotFather, send the /mybots command and find @${username}.
+      2. Tap API Token, then Revoke current token and send the new token here.
+    the_same_token: You have sent the same bot token. First revoke the token in @BotFather and then send a new one.
+    token_updated: The @${username} token has been successfully updated. Send /mybots to update the tokens of other bots.
     confirm_delete_bot: |
       Are you sure you want to disconnect @${bot}?
 
@@ -331,6 +338,7 @@ btn:
     chats: Groups
     statistics: Statistics
     delete_bot: Disconnect Bot
+    update_token: ‼️ Update API Token
     back_to_list: « Back to Bots List
 
   settings:
