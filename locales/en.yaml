@@ -264,10 +264,9 @@ ads:
     confirmed: |
       ✅ Your ad has passed moderation.
 
-      Payment link ${price} ₽ · ~$${(price / 73).toFixed(0)}:
-      ${url}
-
       Your ad becomes visible to users immediately after you made payment.
+
+      Tap Open Ad to pay.
     canceled: |
       ℹ️ Sorry, your ad has not passed moderation.
 
@@ -287,7 +286,7 @@ ads:
       <a href="${url}">@${username}</a> · ${description}
 
       Total views: ${balance}
-      Price: ${price} ₽ · ~$${(price / 73).toFixed(0)}
+      Price: ${price} ₽ · ~$${(price / 78).toFixed(0)}
 
       <b>Statistics:</b>
       Views – ${stats_views}
@@ -381,7 +380,8 @@ btn:
       skip: Skip
     manage:
       name: '@${username} – ${balance}'
-      open_pay: 🚀 Start Ad
+      open_cloudpayments: ☁️ Pay via CloudPayments · ${amountInRUB} RUB
+      open_cryptopay: 🏝 Pay via Crypto Pay · ${amountInTON} TON
       pay:
         cloudpayments: CloudPayments
         paytodo: PayTodo
