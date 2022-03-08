@@ -2,147 +2,156 @@ name: English
 
 start:
   welcome: |
-    <a href="https://t.me/BotUpdates/111"><b>Livegram Bot</b></a> is a builder of feedback bots for Telegram. Read more <a href="http://telegra.ph/What-is-Livegram-Bot-03-17">here</a>.
-    
-    You can control bot by sending these commands:
+    <a href="https://t.me/BotUpdates/111"><b>Livegram Bot</b></a> is a builder of feedback bots for Telegram. <a href="http://telegra.ph/What-is-Livegram-Bot-03-17">Read more</a> about it.
 
-    /addbot - connect a new bot
-    /mybots - manage bots
-
-    /ads - buy ads
-    /help - answers to basic questions
-
-    Join @LivegramUpdates and @secretship to get news faster and don't ping support every time.
+    ${ad}
   do: OK. What do you want to do?
-  choose_language: Please choose your language.
-  language_changed: 👌 OK, your language saved.
+  choose_language: Please choose a language.
+  language_changed: 👌 Done! Bot language saved.
   help: |
-    If you have any questions, take a look at the <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
-    
-    You can control bot by sending these commands:
-
-    /addbot - connect a new bot
-    /mybots - manage bots
+    If you have any questions, take a look at <a href="http://telegra.ph/Livegram-Help-03-29">our Help</a>.
 
     /ads - buy ads
-    /feedback - contact of the dev
-    /lang - сhange your language
+    /feedback - contact support
+    /lang - сhange bot language
 
-    Join @LivegramUpdates and @secretship to get news faster and don't ping support every time.
+    Join @LivegramUpdates and @secretship to stay in touch with us.
+
+    ${ad}
   example: |
-    Here is examples of bots that were made using Livegram Bot:
-  
-    @ExampleSupportBot — example of a bot made using Livegram Bot.
-  feedback: |
-    Message us at @LivegramSupportBot if you have any issues or questions about Livegram Bot.
+    Here is examples of bots that were made using Livegram:
 
-    Please note that we do not answer questions regarding bots connected to our platform. We are Livegram Bot technical support.
+    @ExampleSupportBot — example to see how connected bots work.
+  feedback: |
+    If you have any questions, take a look at <a href="http://telegra.ph/Livegram-Help-03-29">our Help</a>. You will find our contact at the bottom of the page.
   ads: |
-    Use @SecretshipAdsBot if you want to buy ads in this bot. We have more than 5,000,000 active users.
- 
+    Send /ads if you would like to buy ads in this bot. We have more than 5,000,000 active users.
+
 bots:
   add:
     welcome: |
       To connect a bot, you should follow these two steps:
-      
+
       1. Open @BotFather and <a href="http://telegra.ph/Create-Bot-Livegram-FAQ-03-29">create a new bot</a>.
-      2. You’ll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to me.
-      
+      2. You'll get a token (e.g. 12345:6789ABCDEF) — just forward or copy-paste it to this chat.
+
       <b>Warning!</b> Don't connect bots already used by other services like Chatfuel, Manybot, ect.
-            
+
+      ${ad}
+
     wrong_token: |
-      Doesn't look like anything to me. Please send me a token of your bot. It should look like this one: <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>
+      Doesn't look like a bot token. Please send me a token of your bot. It should look like this: <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>
     error_add: |
-      Invalid token. Try to get a new one or use a token of another bot.
+      Invalid token. Try to get a new one or use a token of an another bot.
     bot_already_added: |
       Looks familiar to me. You already have this bot connected.
     connect: |
-      Success! @${bot.username} has been connected.
-      
-      Your new bot is ready for working. If you have any questions, take a look at the <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
-    owner_changed: Success! You are now the ownership of the bot.
+      Success! @${bot.username} has been connected. The bot will forward any (including your own) messages sent to it.
+
+      <b>How do I reply to incoming messages?</b>
+      Use Telegram's <a href="https://telegram.org/tour/groups#replies">reply</a> feature. Swipe left (or double-click) on the message you want to reply.
+
+      <b>How can I allow other users to reply through my bot?</b>
+      Create a group and add your bot there so that all chat members can reply to incoming messages.
+
+      <b>How can I edit a welcome message?</b>
+      To edit a welcome message or add other languages to the bot, choose 'Open Bot Settings' and go to 'Localizations'.
+
+      If you have any questions, take a look at our <a href="http://telegra.ph/Livegram-Help-03-29">Livegram Help</a>.
+
+      ${ad}
+    owner_changed: Success! You are the owner of this bot now.
   list:
     not_found_bots: |
       There is no connected bots yet. Send /addbot to connect a new one.
-    welcome: 'Сhoose a bot from the list below:'
+    welcome: |
+      Сhoose a bot from the list below.
+
+      ${ad}
     view_bot: |
       Here it is: @${bot.username}. What do you want to do with the bot?
+
+      ${ad}
   settings:
+    update_token: |
+      For security reasons, you need to update your Bot API Token, otherwise it will stop working in the near future.
+
+      1. Open @BotFather, send the /mybots command and find @${username}.
+      2. Tap API Token, then Revoke current token and send the new token here.
+    the_same_token: You have sent the same bot token. First revoke the token in @BotFather and then send a new one.
+    token_updated: The @${username} token has been successfully updated. Send /mybots to update the tokens of other bots.
     confirm_delete_bot: |
-      Are you sure you want to delete @${bot}? 
-      
-      Bot messages will not be deleted.
+      Are you sure you want to disconnect @${bot}?
+
+      Messages and bot statistics will not be deleted.
     bot_deleted: 👌 Done! The bot is gone.
     texts:
       welcome: |
-        You can add another one language or edit strings of existed.
+        Here you can manage added languages. To edit message texts, choose a language from the list below.
       select_language: |
-        Here it is: <b>${language.name}</b>.        
-        ${language.is_default ? '\n<b>This language set as default.</b>\n' : ''}        
-        You can edit strings or delete this language. If you set the language as default, it will be shown to users after starting the bot.
+        Here it is: <b>${language.name}</b>. You can set this language as default or remove it from the bot.
+
+        ${language.is_default ? '<b>Used by default.</b> This is the language of a message sent on first start.' : ''}
       add_language: |
-        Choose language you want to add:
-        
-      language_added: 👌 OK, the language has been added.
-      language_deleted: 👌 OK, the language has been deleted.
-      language_saved_by_default: 👌 OK, the language has been set as default.
-      
+        Choose language you want to add to the bot.
+
+      language_added: 👌 Done! The language added.
+      language_deleted: 👌 Done! The language removed.
+      language_saved_by_default: 👌 Done! The language set as default.
+
       change_texts: |
         ${{
-          welcome: '<b>1/2.</b> This message is sent after starting the bot.',
-          after_sending: '<b>2/2.</b> This message is sent automatically as a reply to user messages. By default, it does not send anything.'
+          welcome: '<b>Welcome message.</b> This message is sent to users after they start the bot.',
+          after_sending: '<b>Auto-reply.</b> This message is sent automatically as a reply to all incoming messages. By default, it\'s disabled.'
         }[change.key]}
-        
-        <b>Current strings</b>${change.is_default ? ' (used by default)' : ''}:
-        <pre>${change.current_text || '(strings are not specified)'}</pre>
-        
-        Send a message with a new strings. You can also use <a href="https://core.telegram.org/bots/api#html-style">HTML-style formatting</a>.
+
+        <b>Current text</b>${change.is_default ? ' (default)' : ''}:
+        <pre>${change.current_text || '(not specified)'}</pre>
+
+        Send a new text to replace the current one. You can use <a href="https://core.telegram.org/bots/api#html-style">HTML-style formatting</a>.
       error_parse_message: |
-        Errors in formatting text:
-        
+        Formatting errors:
+
         <pre>${description}</pre>
-        
-        Please fix all errors and send message again.
+
+        Please fix these errors and try again.
       send_timer: |
-        Send a period of time during which the response message will not be sent to a user again. The next time formats are allowed: <code>5s</code>, <code>1m</code> or <code>1h</code>.
+        Send a period of time during which an auto-reply should not be sent to a user repeatedly. For example: <code>5s</code>, <code>1m</code> or <code>1h</code>.
       bad_timer: |
-        Incorrect time. Only periods from 5 seconds to 72 hours are allowed.
+        Incorrect amount of time. A period should be more than 5 seconds and less than 72 hours.
     chats:
       welcome: |
         Choose a group you want to set up.
       chats_not_found: |
-        There is no connected groups yet. All messages will be sent to this conversation.
-         
+        There is no connected groups yet. The bot will send new incoming messages to the one-to-one chat.
+
         To connect a new group, add @${username} as a member to it.
       switch_language: |
-        Choose language messages from users of what will be sent to this group.
+        Choose one or more languages for messages you want to be forwarded to this group.
 
     stats: |
-      Stats for @${username}:
+      Statistics for @${username}:
 
       <b>Users:</b>
       All users: <b>${users_all}</b>
-      Have blocked: <b>${users_bot_blocked}</b>
+      Blocked the bot: <b>${users_bot_blocked}</b>
 
       <b>Messages:</b>
       All messages: <b>${messages_all}</b>
       Incoming: <b>${messages_messages}</b>
       Outgoing: <b>${messages_reply}</b>
 
-      <i>The counter of the users that have blocked the bot is updating only after sending broadcast post.</i>
-        
+      <i>The counter of users who blocked the bot will be updated when a broadcast post is sent.</i>
+
   chat:
     added: |
       Success! The group "${title}" has been connected to @${bot}.
-       
-      Now all messages will be sent there. You can add another users to that group, so they will be also able to reply on messages from @${bot}.
-      
-      To disconnect the group, delete the bot from its members list.
-    removed: |
-      The group "${title}" has been disconnected from @${bot} as the bot was deleted from it.
 
-help_ban: |
-  Incorrect time. The next time formats are allowed: 24h, 365d or 12m.
+      If you have multiple languages added, press 'Configure Group'.
+
+      To disconnect the group, kick the bot from chat.
+    removed: |
+      The group "${title}" was disconnected from @${bot} because the bot was kicked from chat.
 
 terms: |
   By continuing, you agree not to:
@@ -154,59 +163,228 @@ terms: |
   We reserve the right to update these <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service</a> later.
 
   ${is_agreed
-    ? '✅ <b>You agreed to our Terms of Service</b>'
+    ? '✅ <b>You have agreed to our Terms of Service</b>'
     : ''
   }
 
 bot_blocked: |
-  Your bot @${username} has been disconnected and blocked for violating the <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service Livegram</a>.
+  Your bot @${username} was disconnected and blocked for violating our <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service</a>.
 
-  Message us at @LivegramSupportBot if you would like to appeal this decision.
+  Contact us via @LivegramSupportBot if you think this is a mistake.
 
 bot_unblocked: |
   Your bot @${username} has been unblocked.
 
 you_blocked: |
-  You cannot add new bots because we have blocked your bots that violate the <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service Livegram</a>.
+  You cannot add new bots because one of your bots violates our <a href="http://telegra.ph/Livegram-Terms-of-Service-04-02">Terms of Service</a>.
 
-keyboard:
+ads:
+  line: |-
+    ${ad.view_id ? '<a href="t.me/LivegramBot?start=ads"><b><i>' + (isBot ? 'Livegram Ads' : 'Ads') + '</i></b></a>: <a href="' + ad.url + '"><b>@' + ad.username + '</b></a> – ' + ad.description : ''}
+
+  faq: |
+    <b>Livegram Ads shortly explained</b>
+
+    • Your ad will be shown to Telegram <b>active</b> users.
+
+    • Price for 1,000 views is 57 RUB (~$0.8). The min amount is 20,000 views.
+
+    • Your ad becomes visible to users immediately after you made payment.
+
+    • You can track ad views in real time.
+
+    • Your ad will be displayed in the welcome message of @LivegramBot and another messages of the bot.
+
+    • Active ads will be shown to users randomly.
+
+  welcome: |
+    🚀 <b>Livegram Ads</b>
+
+    Here you can create ad for your channel, group or bot to show it in the welcome message of @LivegramBot and another messages of the bot.
+
+    Your ad will be shown to Telegram <b>active</b> users, owner of bots, chats and channels.
+
+    We are supported pay by Apple Pay, Google Pay and bank cards.
+
+  create:
+    disabled: Sorry, creating ads is currently disabled. Try again later.
+    chooseLanguage: Choose a language for your ad. This is a language of users that will see your ad.
+    username: |
+      <b>What to promote?</b>
+
+      Send a public link of your channel, group or bot. For example: username, t.me/username, t.me/userbot?start=payload.
+
+    description: |
+      <b>How to describe it?</b>
+
+      Send your ad text in without line breaks, @username or links.
+
+      The maximum length is 160 characters. Emojis or other emoticons cannot be used. Please follow punctuation and spelling.
+
+    description_too_long: Description is too long. Max 160 symbols.
+    description_too_short: Description is too short. Min 20 symbols.
+    description_has_links: The description cannot contain links or @username. Send me text <b>without links or @username</b>.
+
+    views: Choose an amount of views for your ad.
+
+    confirm: |
+      <b>Check and confirm</b>
+
+      @${username} – ${description}
+
+      Amount of views – ${views}
+
+      Is it OK?
+
+    send_to_moderate: |
+      ${user} · <a href="https://t.me/LivegramBot?start=open_ad_${peer_id}">№${peer_id}</a> · ${status} · ${languages[0]}
+
+      @${username} · ${description}
+
+      ${balance} views · ${price} ₽ · ~$${(price / 73).toFixed(0)}
+
+    confirmed: |
+      ℹ️ Your ad has been created and is awaiting moderation.
+
+      After passing moderation, you can make the payment and start showing your ad to all users.
+
+      Send /ads to view your created ads.
+
+  checking:
+    send_to_checking: |
+      ${user} – <a href="https://t.me/LivegramBot?start=open_ad_${peer_id}">№${peer_id}</a>
+
+      @${username} · ${description}
+
+      ${count} · ${balance} views · ${price} ₽ · ~$${(price / 73).toFixed(0)}
+
+      ${created_at}
+
+  n:
+    confirmed: |
+      ✅ Your ad has passed moderation.
+
+      Your ad becomes visible to users immediately after you made payment.
+
+      Tap Open Ad to pay.
+    canceled: |
+      ℹ️ Sorry, your ad has not passed moderation.
+
+      Possible reasons:
+      – Description is incorrected or contains errors.
+      – Incorrect @username.
+      – Did not meet our policy (we don't promote gambling, scam, drugs, ect).
+      – Your channel is private.
+
+      You can <a href="https://t.me/LivegramBot?start=ads_create">create a new ad</a> or <a href="https://t.me/LivegramSupportBot">contact us</a> for details.
+    notified: ✅ OK.
+  manage:
+    welcome: Choose an ad from the list.
+    ad: |
+      Ad #${peer_id} · ${languages[0] || ''}
+
+      <a href="${url}">@${username}</a> · ${description}
+
+      Total views: ${balance}
+      Price: ${price} ₽ · ~$${(price / 78).toFixed(0)}
+
+      <b>Statistics:</b>
+      Views – ${stats_views}
+
+      Status: ${{
+        'created': 'on moderation',
+        'approved': 'payment required',
+        'canceled': 'moderation failed',
+        'paid': 'views on',
+        'views_completed': 'views completed'
+        }[status]
+      }
+    pay: |
+      💳 Choose a payment method.
+
+      <b>PayTodo</b> is the recommended payment method which mostly supports any credit cards.
+
+      You can also use PayPal if PayTodo is not available.
+
+      Contact us via @LivegramSupportBot if you have any issue.
+    enter_new_description: |
+      @${username} · <code>${description}</code>
+
+      Send a new ad description.
+
+btn:
+  menu:
+    add_bot: 🤖 Add Bot
+    my_bots: 🏝 My Bots
+    ads: 🏟 Ads
+    help: 👨‍🔧 Help
+
   terms:
     agree_and_continue: Agree and Continue
 
-  btn:
+  common:
     true: Yes, It's Right
     back: Back
     back_inline: « Back
     cancel: Cancel
     help: Help
-  
 
   bots:
     add_bot: Connect Bot
-    set: Bot Settings
-    
+    set: Open Bot Settings
+
     texts: Localizations
     chats: Groups
     statistics: Statistics
-    delete_bot: Delete Bot
+    delete_bot: Disconnect Bot
+    update_token: ‼️ Update API Token
     back_to_list: « Back to Bots List
-    
+
   settings:
     users:
       newsletter: Broadcast
     chats:
-      connect_language: Change Language
+      connect_language: Configure Group
     texts:
       add_language: Add Language
       is_default: This language set as default
       set_default: Set as Default
-      change: Edit Strings
-      delete: Delete Language
+      change: Edit Message Texts
+      delete: Remove Language
       reset: Reset
-      skip: Skip
+      skip: Continue »
       complete: Save Changes
       timer: "${timer
-        ? 'Delay Timer: ' + timer + '.'
-        : 'Set Delay Timer'
+        ? 'Cooldown Timer: ' + timer
+        : 'Set Cooldown Timer'
       }"
-      disable_timer: Disable 
+      disable_timer: Reset Timer
+
+  ads:
+    back: « Back
+    open_ad: Open Ad
+    menu:
+      create: Create Ad
+      manage: Manage Ads
+      faq: Help
+      open_support: Contact Us
+    languages:
+      ru: Russian
+      en: English
+    create:
+      yes: Yes
+      no: No
+    checking:
+      yes: Yes
+      edit: Edit
+      skip: Skip
+    manage:
+      name: '@${username} – ${balance}'
+      open_cloudpayments: ☁️ Pay via CloudPayments · ${amountInRUB} RUB
+      open_cryptopay: 🏝 Pay via Crypto Pay · ${amountInTON} TON
+      pay:
+        cloudpayments: CloudPayments
+        paytodo: PayTodo
+        paypal: PayPal
+      problem_with_pay: Contact Us
+      edit_description: Edit Description

@@ -6,13 +6,13 @@ start:
   choose_language: 'Please choose your language:'
   language_changed: OK, your language saved.
   copyright: |
-    This bot was made using @LivegramBot.
+    This bot was made using @LivegramBot
     
 cannot_forward: |
-  You can't forward someone else's messages.
+  You cannot forward someone else's messages.
   
 cannot_edit: |
-  If you want that the receiver can be able to see the changes, send your message as new.
+  If you want the recipient to see the changes, send the message as new.
 
 welcome: |-
   Hello!
