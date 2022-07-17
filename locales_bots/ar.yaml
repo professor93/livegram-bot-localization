@@ -1,0 +1,27 @@
+language_info:
+  is_enabled: true
+  name: العربية
+
+start:
+  choose_language: 'يرجى اختيار اللغة:'
+  language_changed: حسناً، تم حفظ اللغة.
+  copyright: |
+    صنع هذا البوت باستخدام @LivegramBot.
+    
+cannot_forward: |
+  لا يمكنك إعادة توجيه رسائل الآخرين.
+  
+cannot_edit: |
+  إذا أردت أن يرى المستلم التغييرات التي قمت بها، أرسل رسالة جديدة
+
+welcome: |-
+  أهلا بك!
+  
+  يمكنك مراسلتنا باستخدام هذا البوت
+after_sending: (لم يتم تحديد رسالة)
+
+ban: |
+  أنت محظور بسبب ${until ? 'until ' + until + ' UTC' : 'forever'}.${reason ? '\n\nReason: ' + reason : ''}
+
+unban: |
+  تم إلغاء حظرك.
